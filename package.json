@@ -1,0 +1,13 @@
+{
+  "name": "node-graphql",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "git@github.com:baqui/node-graphql.git",
+  "author": "<w.baklazec@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2"
+  }
+}

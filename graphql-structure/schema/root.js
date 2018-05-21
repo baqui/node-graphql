@@ -13,7 +13,8 @@ const RootTypes = `
   }
 `;
 
-export default makeExecutableSchema({
-  typeDefs: [RootTypes, CourseQuery, CourseMutations, Course],
-  resolvers: {},
-});
+export default resolvers =>
+  makeExecutableSchema({
+    typeDefs: [RootTypes, CourseQuery, CourseMutations, Course],
+    resolvers
+  });

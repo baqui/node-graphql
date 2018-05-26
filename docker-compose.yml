@@ -13,3 +13,7 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+  mongo-seed:
+    build: ./graphql-structure/dev-database
+    links:
+      - mongo

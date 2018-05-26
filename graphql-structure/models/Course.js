@@ -1,14 +1,12 @@
 export default class Course {
-  constructor(db) {
-    this.db = db.connector;
+  constructor({ connector }) {
+    this.db = connector.collection('Courses');
   }
 
   getCourses = topic =>
-    topic
-      ? this.db.allCourses.filter(course => course.topic === topic)
-      : this.db.allCourses;
+    topic ? this.db.find({}).toArray() : this.db.find({}).toArray();
 
-  getById = id => this.db.allCourses.filter(course => course.id === id)[0];
+  getById = id => this.db.find({ id }).toArray();
 
   updateCourse = ({ id, topic }) => {
     const course = this.db.allCourses.filter(c => c.id === id)[0];

@@ -3,7 +3,7 @@ import { graphiqlExpress } from 'apollo-server-express';
 import graphqlMiddleware from './graphql-middleware';
 import bodyParser from 'body-parser';
 
-const GRAPHQL_PORT = 4000;
+const GRAPHQL_PORT = 3000;
 
 const graphQLServer = express();
 

@@ -3,7 +3,7 @@
 
 export default {
   Query: {
-    course: (obj, { id }, { Course }) => awaitCourse.getById(id),
+    course: (obj, { id }, { Course }) => Course.getById(id),
     courses: (obj, { topic }, { Course }) => Course.getCourses()
   },
   Mutation: {

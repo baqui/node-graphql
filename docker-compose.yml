@@ -1,19 +1,11 @@
-version: "2"
+version: '3.1'
 services:
-  # graphql:
-  #   container_name: graphql
-  #   restart: always
-  #   build: .
-  #   ports:
-  #     - "4000:4000"
-  #   links:
-  #     - mongo
   mongo:
     container_name: mongo
     image: mongo
     ports:
       - "27017:27017"
   mongo-seed:
-    build: ./graphql-structure/dev-database
+    build: ./app/db
     links:
       - mongo

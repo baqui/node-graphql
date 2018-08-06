@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import express from 'express';
 import { graphiqlExpress } from 'apollo-server-express';
 import graphqlMiddleware from './graphql-middleware';
@@ -15,7 +16,3 @@ graphQLServer.listen(GRAPHQL_PORT, () =>
     `GraphiQL is now running on http://localhost:${GRAPHQL_PORT}/graphiql`
   )
 );
-
-//ARTICLE TO FOLLOW
-//https://dev-blog.apollodata.com/tutorial-building-a-graphql-server-cddaa023c035?_ga=2.184308132.301971161.1526823665-1674861885.1524060418
-//https://www.apollographql.com/docs/graphql-tools/generate-schema.html#modularizing

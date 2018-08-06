@@ -3,7 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 const PATHS = {
-  build: path.join(__dirname, '..', 'server_dist'),
+  build: path.join(__dirname, '..', 'server_dist')
 };
 
 module.exports = {
@@ -39,7 +39,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new CleanWebpackPlugin('server_dist', {})
-  ]
+  plugins: [new CleanWebpackPlugin('server_dist', {})]
 };

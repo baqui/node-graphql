@@ -12,7 +12,10 @@ const dbName = 'test';
 
 let db = (async () => {
   try {
-    const client = await MongoClient.connect(url, { useNewUrlParser: true });
+    const client = await MongoClient.connect(
+      url,
+      { useNewUrlParser: true }
+    );
     db = await client.db(dbName);
   } catch (err) {
     console.log(err.stack);
